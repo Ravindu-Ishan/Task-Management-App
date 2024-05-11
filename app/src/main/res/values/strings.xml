@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TaskManagementApp</string>
+    <string name="titleMain">Your Tasks</string>
+    <string name="tasktitle">Task Title</string>
+    <string name="taskDescription">Description</string>
+    <string name="taskDate">Date</string>
+    <string name="newTaskTitle">New Task</string>
+
+    <string name="cdsc_addtskbtn">Add new task</string>
 </resources>
