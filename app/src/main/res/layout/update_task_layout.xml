@@ -16,16 +16,16 @@
         android:layout_margin="16dp">
 
         <TextView
-            android:id="@+id/newTskTitleTxt"
-            android:layout_width="match_parent"
+            android:id="@+id/updateTskTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/newTaskTitle"
+            android:text="@string/updateTaskTitle"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="12dp"/>
 
         <ImageButton
-            android:id="@+id/newTaskCloseBtn"
+            android:id="@+id/updateCloseBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -36,7 +36,7 @@
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:layout_below="@id/newTskTitleTxt"
+            android:layout_below="@id/updateTskTitle"
             android:layout_marginTop="10dp"
             android:background="?android:attr/listDivider"
             android:backgroundTint="@color/black"
@@ -95,7 +95,7 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/saveTask"
+                android:text="@string/update"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/floatingIconColor"/>
