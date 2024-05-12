@@ -49,5 +49,29 @@ class TaskRepository(application:Application) {
         }
     }
 
+    fun updateTask(task: Task)= MutableLiveData<Resource<Int>>().apply {
+        postValue(Loading())
+        try {
+            CoroutineScope(Dispatchers.IO).launch{
+                val result = taskDao.updateTask(task)
+                postValue(Success(result))
+            }
+        }catch (e:Exception){
+            postValue(Error(e.message.toString()))
+        }
+    }
+
+    fun updateSpecificTask(taskID: String, title:String, description:String)= MutableLiveData<Resource<Int>>().apply {
+        postValue(Loading())
+        try {
+            CoroutineScope(Dispatchers.IO).launch{
+                val result = taskDao.updateSpecificTask(taskID, title, description)
+                postValue(Success(result))
+            }
+        }catch (e:Exception){
+            postValue(Error(e.message.toString()))
+        }
+    }
+
 
 }
