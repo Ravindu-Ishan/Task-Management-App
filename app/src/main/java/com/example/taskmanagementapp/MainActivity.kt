@@ -53,11 +53,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(mainBinding.root)
 
-        mainBinding.tskRcView.adapter = taskRecyclerViewAdapter
+
         mainBinding.tskRcView.layoutManager = LinearLayoutManager(this)  // Or other layout manager if needed
 
-
-        callGetTaskList(taskRecyclerViewAdapter)
 
         val addCloseBtn = addTaskDialog.findViewById<ImageButton>(R.id.newTaskCloseBtn)
         val updateCloseBtn = updateTaskDialog.findViewById<ImageButton>(R.id.updateCloseBtn)
@@ -145,7 +143,13 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
-            } else if (type == "update"){
+            }
+            if (type == "update"){
+
+                updateTitleInput.setText(task.title)
+                updateDescInput.setText(task.description)
+                updateTaskDialog.show()
+
                 updateTaskBtn.setOnClickListener{
                     val taskTitle = updateTitleInput.text.toString()
                     val taskDesc = updateDescInput.text.toString()
@@ -166,7 +170,7 @@ class MainActivity : AppCompatActivity() {
                             }
                             Status.SUCCESS->{
                                 loadingTaskDialog.dismiss()
-                                if(it.data?.toInt() != -1)
+                                if(it.data != -1)
                                 {
                                     longToastShow(msg ="Task Has Been Updated")
                                 }
@@ -181,6 +185,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //task view adapter/layout manager binding
+        mainBinding.tskRcView.adapter = taskRecyclerViewAdapter
+
+        //call get task list
+        callGetTaskList(taskRecyclerViewAdapter)
 
     }
 
