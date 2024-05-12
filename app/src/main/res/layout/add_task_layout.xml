@@ -10,7 +10,7 @@
     >
 
     <RelativeLayout
-        android:id="@+id/closeAddNewTskbtn"
+        android:id="@+id/relativeNewTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp">
@@ -62,6 +62,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/taskTitleInput"
                     android:layout_width="match_parent"
                     android:layout_height="?actionBarSize"
                     android:hint="Enter task title"
@@ -83,6 +84,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/taskDescInput"
                     android:layout_width="match_parent"
                     android:layout_height="86dp"
                     android:backgroundTint="@color/gray"

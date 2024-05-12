@@ -9,6 +9,11 @@
 
     </style>
 
+    <style name="DialogCustomTheme" parent="Theme.Material3.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
     <style name="Theme.TaskManagementApp" parent="Base.Theme.TaskManagementApp" />
 
 
