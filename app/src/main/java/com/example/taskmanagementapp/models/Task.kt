@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import java.lang.invoke.TypeDescriptor
 import java.util.Date
 
-@Entity
+@Entity()
 data class Task(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name="taskID")

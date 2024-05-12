@@ -26,7 +26,9 @@
             android:textColor="@color/black"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/taskRecyclerView"
+            android:visibility="visible"
+            android:id="@+id/tskRcView"
+            android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"

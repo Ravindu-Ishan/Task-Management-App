@@ -10,7 +10,8 @@ import com.example.taskmanagementapp.dao.TaskDao
 import com.example.taskmanagementapp.models.Task
 @Database(
     entities = [Task::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 @TypeConverters(TypeConverter::class)
 abstract class TaskDatabase : RoomDatabase(){

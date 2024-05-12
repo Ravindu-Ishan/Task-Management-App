@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#8293FF</color>
     <color name="floatingIconColor">#4C59AC</color>
-    <color name="gray">#EEEEEE</color>
+    <color name="gray">#E0E5FF</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

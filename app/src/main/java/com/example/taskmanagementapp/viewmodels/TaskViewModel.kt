@@ -12,4 +12,10 @@ class TaskViewModel(application: Application):AndroidViewModel(application) {
     fun insertTask(task:Task):MutableLiveData<Resource<Long>>{
         return taskRepository.insertTask(task)
     }
+    fun getTaskList() = taskRepository.getTaskList()
+
+    fun deleteTaskById(task: String):MutableLiveData<Resource<Int>>{
+        return taskRepository.deleteTaskByID(task)
+    }
+
 }
