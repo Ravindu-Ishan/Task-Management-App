@@ -25,6 +25,14 @@ class MainActivity : AppCompatActivity() {
             setupDialog(R.layout.update_task_layout)
         }
     }
+
+    private val loadingTaskDialog:Dialog by lazy {
+        Dialog(this,R.style.DialogCustomTheme).apply{
+            setupDialog(R.layout.loading_layout)
+        }
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(mainBinding.root)
@@ -60,6 +68,8 @@ class MainActivity : AppCompatActivity() {
             val taskTitle = newTitleInput.text.toString()
             val taskDesc = newDescInput.text.toString()
 
+            loadingTaskDialog.show()
+
 //            val toastMessage = "Set : $taskTitle - $taskDesc"  // Use string templates for cleaner formatting
 //            val toast = Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT)
 //            toast.show()
@@ -71,6 +81,9 @@ class MainActivity : AppCompatActivity() {
         updateTaskBtn.setOnClickListener{
             val taskTitle = updateTitleInput.text.toString()
             val taskDesc = updateDescInput.text.toString()
+
+            loadingTaskDialog.show()
+
 
 //            val toastMessage = "Set : $taskTitle - $taskDesc"  // Use string templates for cleaner formatting
 //            val toast = Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT)
